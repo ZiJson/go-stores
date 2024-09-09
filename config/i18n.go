@@ -28,6 +28,7 @@ func loadTranslationFile(filename string) {
 	// 獲取項目根目錄（假設 config 目錄直接位於項目根目錄下）
 	log.Printf("當前絕對路徑: %v", currentFile)
 	rootDir := filepath.Dir(filepath.Dir(currentFile))
+	log.Printf("根目錄: %v", rootDir)
 	rootEntries, _ := os.ReadDir(rootDir)
 	log.Printf("根目錄內容: %v", getFileNames(rootEntries))
 	// 構建到 locales 目錄的完整路徑
